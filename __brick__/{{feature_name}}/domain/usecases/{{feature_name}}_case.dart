@@ -5,20 +5,20 @@ import 'package:dartz/dartz.dart';
 import 'package:{{app_name}}/core/failures/failure.dart';
 import 'package:{{app_name}}/core/usecases/usecase.dart';
 
-class Get{{feature_name.pascalCase()}} implements UseCase<void, Get{{feature_name.pascalCase()}}Parameters> {
+class {{feature_name.pascalCase()}}Case implements UseCase<void,{{feature_name.pascalCase()}}CaseParameters> {
   final {{feature_name.pascalCase()}}Repository repository;
 
-  Get{{feature_name.pascalCase()}}({required this.repository});
+ {{feature_name.pascalCase()}}Case({required this.repository});
 
   @override
-  Future<Either<Failure, void>> call(Get{{feature_name.pascalCase()}}Parameters parameters) async {
+  Future<Either<Failure, void>> call({{feature_name.pascalCase()}}CaseParameters parameters) async {
     return repository.get{{feature_name.pascalCase()}}();
   }
 }
 
-class Get{{feature_name.pascalCase()}}Parameters extends Equatable {
+class {{feature_name.pascalCase()}}CaseParameters extends Equatable {
 
-  const Get{{feature_name.pascalCase()}}Parameters();
+  const {{feature_name.pascalCase()}}CaseParameters();
 
   @override
   List<Object?> get props => [];
