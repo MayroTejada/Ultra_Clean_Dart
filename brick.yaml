@@ -1,5 +1,5 @@
 name: ucd
-description: A new brick created with the Mason CLI.
+description: Mason brick for generate Clean-Arquitecture Template (UCD).
 
 # The following defines the brick repository url.
 # Uncomment and update the following line before publishing the brick.
@@ -27,8 +27,11 @@ environment:
 #  * an optional separator (list only)
 
 vars:
-  name:
-    type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+  osType:
+    type: enum
+    description: Choose what template want to generate
+    values:
+      - new Clean-Arquitecture feature
+      - new testing
+      - new individual layer
+    prompt: What you want to do?
