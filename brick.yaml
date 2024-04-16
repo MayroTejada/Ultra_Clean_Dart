@@ -27,11 +27,24 @@ environment:
 #  * an optional separator (list only)
 
 vars:
-  osType:
+  app_name:
+    type: string
+    description: write the name of the app
+    default: app_name
+    prompt: Name of the flutter App(pubspec.yaml) of your flutter project?
+
+  templateType:
     type: enum
     description: Choose what template want to generate
     values:
       - new Clean-Arquitecture feature
       - new testing
       - new individual layer
+      - Exit
     prompt: What you want to do?
+
+  feature_name:
+    type: string
+    description: write the name of the module
+    default: feature
+    prompt: Name of the new feature?
