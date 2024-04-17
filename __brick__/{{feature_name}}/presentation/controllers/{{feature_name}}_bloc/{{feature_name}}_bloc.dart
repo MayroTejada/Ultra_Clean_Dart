@@ -6,8 +6,7 @@ import '../../../domain/usecases/{{feature_name}}_case.dart';
 import '{{feature_name}}_events.dart';
 import '{{feature_name}}_state.dart';
 
-class {{feature_name.pascalCase()}}Bloc extends Bloc<{{feature_name.pascalCase()}}Events, {{feature_name.pascalCase()}}State>
-    implements Disposable {
+class {{feature_name.pascalCase()}}Bloc extends Bloc<{{feature_name.pascalCase()}}Events, {{feature_name.pascalCase()}}State> {
   final {{feature_name.pascalCase()}}Case usecase;
 
   {{feature_name.pascalCase()}}Bloc(this.usecase) : super(const {{feature_name.pascalCase()}}State().initial{{feature_name.pascalCase()}}State()) {
@@ -19,19 +18,13 @@ class {{feature_name.pascalCase()}}Bloc extends Bloc<{{feature_name.pascalCase()
     emit(state.loading{{feature_name.pascalCase()}}State());
 
     final result =
-        await usecase.call(Get{{feature_name.pascalCase()}}Parameters());
+        await usecase.call({{feature_name.pascalCase()}}CaseParameters());
 
     result.fold(
       (failure) => emit(state.failed{{feature_name.pascalCase()}}State(failure)),
       (success) {
-        emit(state.successfull{{feature_name.pascalCase()}}State(profile: success));
+        emit(state.successfull{{feature_name.pascalCase()}}State({{feature_name.camelCase()}}: null));
       },
     );
-  }
-
-  @override
-  FutureOr onDispose() {
-    // TODO: implement onDispose
-    throw UnimplementedError();
   }
 }
