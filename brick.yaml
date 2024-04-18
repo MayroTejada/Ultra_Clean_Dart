@@ -37,10 +37,7 @@ vars:
     type: enum
     description: Choose what template want to generate
     values:
-      - new Clean-Arquitecture feature
-      - new testing
-      - new individual layer
-      - Exit
+      - Generate complete feature
     prompt: What you want to do?
 
   feature_name:

@@ -1,0 +1,11 @@
+name: ultra_clean_dart
+description: A new hook
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+dev_dependencies:
+  mason: ^0.1.0-dev.52
+dependencies:
+  build_runner: ^2.4.9
