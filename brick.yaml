@@ -44,4 +44,10 @@ vars:
     type: string
     description: write the name of the module
     default: feature
-    prompt: Name of the new feature?
+    prompt: Name of the feature?
+
+  use_network:
+    type: boolean
+    default: true
+    description: write the name of the module
+    prompt: Use network connection?
