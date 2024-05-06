@@ -1,7 +1,7 @@
 import 'package:{{app_name}}/core/failures/failure.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../../domain/entities/{{feature_name.snakeCase()}}.dart';
+import '../../../{{#use_domain}}domain{{/use_domain}}/entities/{{feature_name.snakeCase()}}.dart';
 
 enum {{feature_name.pascalCase()}}StateEnum { none, intial, loading, success, failed }
 
