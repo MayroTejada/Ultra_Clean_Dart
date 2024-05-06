@@ -3,7 +3,22 @@ import 'package:mason/mason.dart';
 void run(HookContext context) {
   // Read vars.
   // Use the `Logger` instance.
-  context.logger.info('lets bake this feature!! :D');
-  bool isFeatureComplete =
-      context.vars['templateType'] == 'Generate complete feature';
+
+  const String kirby = '''⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣼⠟⠻⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⠛⢿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠃⠆⠘⣿⠀⠀⠀⠀⠀⠀⠀⢠⣿⠁⡀⠀⢻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣧⣀⣀⣼⣿⣇⠀⠀⠀⠀⠀⠀⢸⣿⣄⣀⣀⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡇⡀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡯⠅⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡼⣿⣿⢳⡟⠁⠀⠀⠀⠀⠀⠀⢸⣷⡹⣿⡿⣹⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣠⠖⠋⠉⠉⠉⠙⠲⣦⡀⠀⢻⣷⣄⣠⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⢿⣷⣄⣰⣿⠇⠀⠀⢀⣠⡴⠶⠶⠶⢤⣄⡀⠀
+⠸⣏⡀⠒⢶⠀⠀⢠⠀⢸⣷⠀⠀⠙⠻⠟⠋⠀⢠⡀⠀⠀⠀⠀⣰⡄⠈⠛⠛⠛⠃⠀⠀⢰⣏⠀⢀⣀⣠⣀⡀⠀⢻⡄
+⠀⠉⠛⠦⠤⠤⠤⠼⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠘⠻⠷⠶⠶⠾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⣁⣉⣉⣩⣶⠟⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀''';
+
+  context.logger.info(
+    'lets bake this feature!! :D \n${kirby} ',
+  );
+  List<dynamic> layers = context.vars['layers'];
+  context.logger.info(layers.toString());
 }

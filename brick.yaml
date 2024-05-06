@@ -32,14 +32,16 @@ vars:
     description: write the name of the app
     default: app_name
     prompt: Name of the flutter App(pubspec.yaml) of your flutter project?
-
-  templateType:
-    type: enum
-    description: Choose what template want to generate
+  layers:
+    type: array
+    description: Select the layeres you want to include in your feature
     values:
-      - Generate complete feature
-    prompt: What you want to do?
-
+      - "domain"
+      - "presentation"
+      - "data"
+      - "all"
+    defaults:
+      - "all"
   feature_name:
     type: string
     description: write the name of the module
